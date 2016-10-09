@@ -1,5 +1,6 @@
 package de.crazyinfo.fpe_rechner;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
@@ -12,6 +13,7 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends Activity
+
 
         implements OnClickListener {
 
@@ -31,6 +33,15 @@ public class MainActivity extends Activity
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
 
+    /* SharedPreferences */
+    String enterFactor;                                                                             // String für Eingabe des Faktors
+    String readFactor;                                                                              // String für die Ausgabe des Faktors
+
+    final String keyFactor = "keyFactor";
+
+    SharedPreferences prefs;
+    SharedPreferences.Editor prefsEditor;
+
     private GoogleApiClient client;
 
     @Override
@@ -47,6 +58,9 @@ public class MainActivity extends Activity
 
         buttonCalc.setOnClickListener(this);
 
+        prefs = this.getSharedPreferences("prefsData" , MODE_PRIVATE);                              // Datei wird gespeichert als prefsData
+        prefsEditor = prefs.edit();
+
             // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -56,6 +70,25 @@ public class MainActivity extends Activity
 
     @Override
     public void onClick(View v) {
+
+        /* Preferences: Eingabe speichern und lesen */
+        switch (v.getId()) {
+
+            case R.id.buttonCalc: {
+
+                if (editTextFactor.getText().length() > 0) {
+                    enterFactor = editTextFactor.getText().toString();
+                    prefsEditor.putString(keyFactor, enterFactor);
+                    prefsEditor.commit();
+                    break;
+                }                                                                                   // Speichern der Eingabe des Faktors
+            }
+            case R.id.editTextFactor: {
+                readFactor = prefs.getString(keyFactor, "No read value for factor definied!");
+                editTextFactor.setText(readFactor);
+                break;
+            }                                                                                       // Lesen der Eingabe des Faktors
+        }
 
         if (v == buttonCalc) {
 
@@ -76,7 +109,7 @@ public class MainActivity extends Activity
             catch (NumberFormatException nfe)
                 {
                     textViewResult.setText("");
-                    Toast.makeText(this, getString(R.string.toastNoValue), Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, getString(R.string.toastNoValue), Toast.LENGTH_SHORT).show();
                     return;
                 }
 
