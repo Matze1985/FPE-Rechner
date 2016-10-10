@@ -34,8 +34,8 @@ public class MainActivity extends Activity
      */
 
     /* SharedPreferences */
-    String enterFactor;                                                                             // String für Eingabe des Faktors
-    String readFactor;                                                                              // String für die Ausgabe des Faktors
+    String enterTextFactor;                                                                         // String für Eingabe des Faktors
+    String readTextFactor;                                                                          // String für die Ausgabe des Faktors
 
     final String keyFactor = "keyFactor";
 
@@ -58,37 +58,20 @@ public class MainActivity extends Activity
 
         buttonCalc.setOnClickListener(this);
 
-        prefs = this.getSharedPreferences("prefsData" , MODE_PRIVATE);                              // Datei wird gespeichert als prefsData
+        prefs = this.getSharedPreferences("prefsData", MODE_PRIVATE);                              // Datei - prefsData
         prefsEditor = prefs.edit();
+        editTextFactor.setText(prefs.getString(keyFactor, ""));
 
-            // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
     }
 
     // OnClick wird aufgerufen, wenn geklickt wird
 
     @Override
     public void onClick(View v) {
-
-        /* Preferences: Eingabe speichern und lesen */
-        switch (v.getId()) {
-
-            case R.id.buttonCalc: {
-
-                if (editTextFactor.getText().length() > 0) {
-                    enterFactor = editTextFactor.getText().toString();
-                    prefsEditor.putString(keyFactor, enterFactor);
-                    prefsEditor.commit();
-                    break;
-                }                                                                                   // Speichern der Eingabe des Faktors
-            }
-            case R.id.editTextFactor: {
-                readFactor = prefs.getString(keyFactor, "No read value for factor definied!");
-                editTextFactor.setText(readFactor);
-                break;
-            }                                                                                       // Lesen der Eingabe des Faktors
-        }
 
         if (v == buttonCalc) {
 
@@ -167,6 +150,10 @@ public class MainActivity extends Activity
 
             /* Ergebnisausgabe */
             textViewResult.setText(getString(R.string.calcResult) + fpu + getString(R.string.textFpu) + insulin + getString(R.string.textAmountOfInsulin) + checkHours + getString(R.string.textHours));
+
+            /* Preferences: Wert in das Feld EditText setzen */
+            prefsEditor.putString(keyFactor, editTextFactor.getText().toString());
+            prefsEditor.commit();
         }
     }
 }
