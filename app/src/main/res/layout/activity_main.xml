@@ -31,7 +31,8 @@
         android:backgroundTint="#b5e61d"
         android:layout_below="@+id/textViewNote"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:imeOptions="actionNext" />
 
     <EditText
         android:hint="@string/editTextKcal"
@@ -42,7 +43,8 @@
         android:backgroundTint="#b5e61d"
         android:layout_below="@+id/editTextCho"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:imeOptions="actionNext" />
 
     <EditText
         android:hint="@string/editTextFactor"
@@ -53,7 +55,8 @@
         android:backgroundTint="#b5e61d"
         android:layout_below="@+id/editTextKcal"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:imeOptions="actionDone" />
 
     <Button
         android:text="@string/buttonCalc"
@@ -67,6 +70,7 @@
         style="@android:style/Widget.Material.Button" />
 
     <TextView
+        android:textIsSelectable="true"
         android:padding="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

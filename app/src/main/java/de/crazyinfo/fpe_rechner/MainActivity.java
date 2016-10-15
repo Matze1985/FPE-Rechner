@@ -1,10 +1,14 @@
 package de.crazyinfo.fpe_rechner;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -34,10 +38,7 @@ public class MainActivity extends Activity
      */
 
     /* SharedPreferences */
-    String enterTextFactor;                                                                         // String für Eingabe des Faktors
-    String readTextFactor;                                                                          // String für die Ausgabe des Faktors
-
-    final String keyFactor = "keyFactor";
+    final String keyFactor = "keyFactor";                                                           // Speichert den Wert Faktor
 
     SharedPreferences prefs;
     SharedPreferences.Editor prefsEditor;
@@ -72,6 +73,13 @@ public class MainActivity extends Activity
 
     @Override
     public void onClick(View v) {
+
+        /* Wenn Button gedrückt wird, dann schließt Tastatur automatisch */
+        InputMethodManager inputManager = (InputMethodManager)
+                getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
 
         if (v == buttonCalc) {
 
