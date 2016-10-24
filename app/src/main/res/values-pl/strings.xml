@@ -21,4 +21,6 @@
     <string name="textFpu">\u0020WBT\n\n</string>
     <!-- String for toast error message -->
     <string name="toastNoValue">Proszę podać wartość!</string>
+    <!-- String for info on toolbar -->
+    <string name="toolbarInfo">Info</string>
 </resources>

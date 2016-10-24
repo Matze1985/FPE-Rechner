@@ -21,4 +21,6 @@
     <string name="textFpu">\u0020FPE\n\n</string>
     <!-- String for toast error message -->
     <string name="toastNoValue">Bitte Werte übermitteln!</string>
+    <!-- String for info on toolbar -->
+    <string name="toolbarInfo">Info</string>
 </resources>

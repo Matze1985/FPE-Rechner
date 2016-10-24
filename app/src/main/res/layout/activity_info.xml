@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_material_dark"
+        android:elevation="4dp"
+        android:theme="@style/toolbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <TextView
+        android:autoLink="web"
+        android:textColorLink="#b5e61d"
+        android:text="Mathias Noack\nCopyright © 2016\ngnu.org/licenses/gpl-3.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.07"
+        android:id="@+id/textViewInfoCopyright"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:autoLink="email"
+        android:textColorLink="#b5e61d"
+        android:text="E-Mail:\ninfo@crazyinfo.de\n\n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.07"
+        android:id="@+id/textViewInfoMail"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/textViewInfoCopyright"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:autoLink="web"
+        android:textColorLink="#b5e61d"
+        android:text="URL:\ncrazyinfo.de\n\nGitHub:\ngithub.com/Matze1985/FPE-Rechner\n\nGoogle+:\nplus.google.com/communities/117606893613804534090\n\nPayPal:\npaypal.me/MathiasN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.07"
+        android:id="@+id/textViewInfoWeb"
+        android:layout_marginTop="45dp"
+        android:layout_alignTop="@+id/textViewInfoMail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+</RelativeLayout>

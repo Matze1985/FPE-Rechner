@@ -1,9 +1,15 @@
 package de.crazyinfo.fpe_rechner;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
-import android.app.Activity;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
@@ -14,7 +20,7 @@ import android.widget.Toast;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-public class MainActivity extends Activity
+public class MainActivity extends ActionBarActivity
 
 
         implements OnClickListener {
@@ -43,10 +49,25 @@ public class MainActivity extends Activity
 
     private GoogleApiClient client;
 
+    /* Toolbar definieren */
+    Toolbar toolbar;
+    ActionBar actionBar;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /* Toolbar einrichten */
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        if(Build.VERSION.SDK_INT >= 21) {                                                           // Abfrage für ältere Versionen verhindert App-Absturz
+            toolbar.setElevation(10);                                                               // Schattenstärke der Toolbar
+        }
+
+        actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(false);                                                 // Zurück Button deaktiviert
 
         // Definition App (Button, Text etc. mit Hinweisausgabe)
         buttonCalc = (Button) findViewById(R.id.buttonCalc);
@@ -65,6 +86,29 @@ public class MainActivity extends Activity
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.toolbar_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.toolbarInfo) {
+            Intent i_Info = new Intent(this, InfoActivity.class);
+            this.startActivity(i_Info);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     // OnClick wird aufgerufen, wenn geklickt wird
