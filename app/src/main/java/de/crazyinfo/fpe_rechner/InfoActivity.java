@@ -27,9 +27,8 @@ public class InfoActivity extends ActionBarActivity {
         }
 
         actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);                         // Zurück Button aktiviert
-        actionBar.setSubtitle(getString(R.string.toolbarInfo));                                     // Anzeige für Subtitel
-
+        actionBar.setDisplayHomeAsUpEnabled(true);                          // Zurück Button aktiviert
+        actionBar.setSubtitle(getString(R.string.toolbarInfo));                                      // Anzeige für Subtitel
     }
 
     @Override
@@ -39,10 +38,11 @@ public class InfoActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == android.R.id.home) {
+        if (id == android.R.id.home) {                                       // Zurück Button via BackPressed
             onBackPressed();
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 }
+

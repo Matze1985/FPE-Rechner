@@ -22,7 +22,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends ActionBarActivity
 
-
         implements OnClickListener {
 
     /**
@@ -35,6 +34,10 @@ public class MainActivity extends ActionBarActivity
     private EditText editTextKcal;                                                                  // Kcal
     private EditText editTextFactor;                                                                // Faktor
     private TextView textViewResult;                                                                // Ergebnis
+
+    /* AppShortcuts */
+    private final static String ACTION_1 = "main";
+    private final static String ACTION_2 = "info";
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -57,6 +60,16 @@ public class MainActivity extends ActionBarActivity
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /* AppShortcuts */
+        switch (getIntent().getAction()){
+            case ACTION_1:                                                                          // ACTION_1 = Main
+                break;
+            case ACTION_2:                                                                          // ACTION_2 = Info
+                break;
+            default:
+                break;
+        }
 
         /* Toolbar einrichten */
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -102,7 +115,7 @@ public class MainActivity extends ActionBarActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        // noinspection SimplifiableIfStatement
         if (id == R.id.toolbarInfo) {
             Intent i_Info = new Intent(this, InfoActivity.class);
             this.startActivity(i_Info);

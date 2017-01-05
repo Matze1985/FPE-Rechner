@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+5    <shortcut
+        android:shortcutId="main"
+        android:enabled="true"
+        android:icon="@drawable/ic_main_24dp"
+        android:shortcutShortLabel="@string/app_name"
+        android:shortcutLongLabel="@string/app_name"
+        android:shortcutDisabledMessage="@string/app_name">
+        <intent
+            android:action="main"
+            android:targetPackage="de.crazyinfo.fpe_rechner"
+            android:targetClass="de.crazyinfo.fpe_rechner.MainActivity" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="info"
+        android:enabled="true"
+        android:icon="@drawable/ic_info_24dp"
+        android:shortcutShortLabel="@string/toolbarInfo"
+        android:shortcutLongLabel="@string/toolbarInfo"
+        android:shortcutDisabledMessage="@string/toolbarInfo">
+        <intent
+            android:action="info"
+            android:targetPackage="de.crazyinfo.fpe_rechner"
+            android:targetClass="de.crazyinfo.fpe_rechner.InfoActivity" />
+    </shortcut>
+</shortcuts>
