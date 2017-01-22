@@ -13,6 +13,18 @@
             android:targetClass="de.crazyinfo.fpe_rechner.MainActivity" />
     </shortcut>
     <shortcut
+        android:shortcutId="converter"
+        android:enabled="true"
+        android:icon="@drawable/ic_converter_24dp"
+        android:shortcutShortLabel="@string/toolbarConverter"
+        android:shortcutLongLabel="@string/toolbarConverter"
+        android:shortcutDisabledMessage="@string/toolbarConverter">
+        <intent
+            android:action="converter"
+            android:targetPackage="de.crazyinfo.fpe_rechner"
+            android:targetClass="de.crazyinfo.fpe_rechner.ConverterActivity" />
+    </shortcut>
+    <shortcut
         android:shortcutId="info"
         android:enabled="true"
         android:icon="@drawable/ic_info_24dp"

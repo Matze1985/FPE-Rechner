@@ -20,9 +20,7 @@ import android.widget.Toast;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-public class MainActivity extends ActionBarActivity
-
-        implements OnClickListener {
+public class MainActivity extends ActionBarActivity implements OnClickListener {
 
     /**
      * Wird aufgerufen, wenn die Aktivität erstellt wird.
@@ -37,7 +35,8 @@ public class MainActivity extends ActionBarActivity
 
     /* AppShortcuts */
     private final static String ACTION_1 = "main";
-    private final static String ACTION_2 = "info";
+    private final static String ACTION_2 = "converter";
+    private final static String ACTION_3 = "info";
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -65,7 +64,9 @@ public class MainActivity extends ActionBarActivity
         switch (getIntent().getAction()){
             case ACTION_1:                                                                          // ACTION_1 = Main
                 break;
-            case ACTION_2:                                                                          // ACTION_2 = Info
+            case ACTION_2:                                                                          // ACTION_2 = Converter
+                break;
+            case ACTION_3:                                                                          // ACTION_2 = Info
                 break;
             default:
                 break;
@@ -116,8 +117,13 @@ public class MainActivity extends ActionBarActivity
         int id = item.getItemId();
 
         // noinspection SimplifiableIfStatement
+        if (id == R.id.toolbarConverter) {
+            Intent i_Converter = new Intent(this, ConverterActivity.class);                         // Wechsel ConverterActivity
+            this.startActivity(i_Converter);
+            return true;
+        }
         if (id == R.id.toolbarInfo) {
-            Intent i_Info = new Intent(this, InfoActivity.class);
+            Intent i_Info = new Intent(this, InfoActivity.class);                                   // Wechsel InfoActivity
             this.startActivity(i_Info);
             return true;
         }

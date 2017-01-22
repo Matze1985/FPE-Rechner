@@ -21,6 +21,12 @@
     <string name="textFpu">\u0020FPE\n\n</string>
     <!-- String for toast error message -->
     <string name="toastNoValue">Bitte Werte übermitteln!</string>
+    <!-- String for converter input value -->
+    <string name="editTextConverterInput">Glukosewert</string>
+    <!-- String for converter on toolbar -->
+    <string name="toolbarConverter">mg/dl ↔ mmol/l</string>
+    <!-- String for text note converter -->
+    <string name="textViewNoteConverter">Hier findet man einen Umrechner für die Maßeinheiten mg/dl und mmol/l.</string>
     <!-- String for info on toolbar -->
     <string name="toolbarInfo">Info</string>
 </resources>

@@ -28,7 +28,8 @@ public class InfoActivity extends ActionBarActivity {
 
         actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);                          // Zurück Button aktiviert
-        actionBar.setSubtitle(getString(R.string.toolbarInfo));                                      // Anzeige für Subtitel
+        actionBar.setTitle(getString(R.string.app_name));                                // Anzeige für Titel
+        actionBar.setSubtitle(getString(R.string.toolbarInfo));                                       // Anzeige für Subtitel
     }
 
     @Override

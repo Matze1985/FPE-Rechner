@@ -21,6 +21,12 @@
     <string name="textFpu">\u0020WBT\n\n</string>
     <!-- String for toast error message -->
     <string name="toastNoValue">Proszę podać wartość!</string>
+    <!-- String for converter input value -->
+    <string name="editTextConverterInput">Wartość glukozy</string>
+    <!-- String for converter on toolbar -->
+    <string name="toolbarConverter">mg/dl ↔ mmol/l</string>
+    <!-- String for text note converter -->
+    <string name="textViewNoteConverter">Tutaj można znaleść przelicznik dla wartości mg/dl i mnol/l.</string>
     <!-- String for info on toolbar -->
     <string name="toolbarInfo">Info</string>
 </resources>

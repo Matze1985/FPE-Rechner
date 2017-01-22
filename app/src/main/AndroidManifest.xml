@@ -17,6 +17,16 @@
         </activity>
 
         <activity
+            android:name="de.crazyinfo.fpe_rechner.ConverterActivity"
+            android:label="@string/toolbarConverter"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.crazyinfo.fpe_rechner.MainActivity" />
+        </activity>
+
+        <activity
             android:name="de.crazyinfo.fpe_rechner.InfoActivity"
             android:label="@string/toolbarInfo"
             android:theme="@style/Theme.AppCompat.NoActionBar">

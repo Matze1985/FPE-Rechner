@@ -21,6 +21,12 @@
     <string name="textFpu">\u0020HCGP\n\nemitir\u0020</string>
     <!-- String for toast error message -->
     <string name="toastNoValue">Por favor comunicar datos!</string>
+    <!-- String for converter input value -->
+    <string name="editTextConverterInput">Valor de glucosa</string>
+    <!-- String for converter on toolbar -->
+    <string name="toolbarConverter">mg/dl ↔ mmol/l</string>
+    <!-- String for text note converter -->
+    <string name="textViewNoteConverter">Here find a converter for the units of measure mg/dl and mmol/l.</string>
     <!-- String for info on toolbar -->
     <string name="toolbarInfo">Info</string>
 </resources>
