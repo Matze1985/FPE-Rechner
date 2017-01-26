@@ -22,11 +22,11 @@
     <!-- String for toast error message -->
     <string name="toastNoValue">S\'il vous plait communiquer les données!</string>
     <!-- String for converter input value -->
-    <string name="editTextConverterInput">Valeur de glucose</string>
+    <string name="editTextConverterInput">valeur de glucose</string>
     <!-- String for converter on toolbar -->
     <string name="toolbarConverter">mg/dl ↔ mmol/l</string>
     <!-- String for text note converter -->
-    <string name="textViewNoteConverter">Here find a converter for the units of measure mg/dl and mmol/l.</string>
+    <string name="textViewNoteConverter">Ici on a un calculateur pour convertir les uniteés de mg/dl a mmol/l et inversement.</string>
     <!-- String for info on toolbar -->
     <string name="toolbarInfo">Info</string>
 </resources>

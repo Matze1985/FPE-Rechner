@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.Locale;
 
 public class ConverterActivity extends ActionBarActivity implements View.OnClickListener {
 
@@ -42,7 +43,7 @@ public class ConverterActivity extends ActionBarActivity implements View.OnClick
         actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);                                                         // Zurück Button aktiviert
         actionBar.setTitle(getString(R.string.app_name));                                                              // Anzeige für Titel
-        actionBar.setSubtitle(getString(R.string.toolbarConverter));                                                          // Anzeige für Subtitel
+        actionBar.setSubtitle(getString(R.string.toolbarConverter));                                                           // Anzeige für Subtitel
 
         // Definition App (Button, Text etc. mit Hinweisausgabe)
         editTextConverterInput = (EditText) findViewById(R.id.editTextConverterInput);
@@ -50,10 +51,9 @@ public class ConverterActivity extends ActionBarActivity implements View.OnClick
         buttonMmoll = (Button) findViewById(R.id.buttonMmoll);
         buttonMgdl = (Button) findViewById(R.id.buttonMgdl);
 
-        // calling onClick() method
+        // Calling onClick() method
         buttonMmoll.setOnClickListener(this);
         buttonMgdl.setOnClickListener(this);
-
     }
 
     @Override
@@ -63,7 +63,7 @@ public class ConverterActivity extends ActionBarActivity implements View.OnClick
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == android.R.id.home) {                                       // Zurück Button via BackPressed
+        if (id == android.R.id.home) {                                                              // Zurück Button via BackPressed
             onBackPressed();
             return true;
         }
@@ -96,10 +96,11 @@ public class ConverterActivity extends ActionBarActivity implements View.OnClick
         }
 
         /* Berechnungen */
+        Locale.setDefault(new Locale("en", "US"));                                                      // Punkt statt Komma verwenden
         mgdlSubResult = Math.abs(converter * 0.0555);                                                   // Teilergebnis mg/dl berechnen
-        String mgdlResult = String.format("%.1f", mgdlSubResult);                                       // Ergebnis ohne Komma
+        String mgdlResult = String.format("%.1f", mgdlSubResult);                                       // Ergebnis ohne Komma gerundet
         mmollSubResult = Math.abs(converter * 18.0182);                                                 // Teilergebnis mmol/l berechnen
-        String mmollResult = String.format("%.0f", mmollSubResult);                                     // Ergebnis mit Komma
+        String mmollResult = String.format(Locale.ROOT, "%.0f", mmollSubResult);                        // Ergebnis mit Komma gerundet
 
         switch (v.getId()) {
             case R.id.buttonMmoll:

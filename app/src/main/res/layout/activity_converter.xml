@@ -35,6 +35,8 @@
         android:backgroundTint="#b5e61d"
         android:imeOptions="actionDone"
         android:layout_below="@+id/textViewNoteConverter"
+        android:layout_alignRight="@+id/textViewNoteConverter"
+        android:layout_alignEnd="@+id/textViewNoteConverter"
         android:layout_alignLeft="@+id/textViewNoteConverter"
         android:layout_alignStart="@+id/textViewNoteConverter" />
 
@@ -43,8 +45,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editTextConverterInput"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" >
+        android:layout_alignLeft="@+id/editTextConverterInput"
+        android:layout_alignStart="@+id/editTextConverterInput"
+        android:layout_alignRight="@+id/editTextConverterInput"
+        android:layout_alignEnd="@+id/editTextConverterInput">
 
         <Button
             android:text="mg/dl"
@@ -67,16 +71,16 @@
 
     <TextView
         android:textIsSelectable="true"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:id="@+id/textViewResult"
-        android:padding="20dp"
         android:layout_below="@+id/buttons"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp" />
+        android:padding="20dp" />
 
 </RelativeLayout>
