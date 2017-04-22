@@ -13,7 +13,7 @@ It is not a officially approved medical application.
 [**Follow on Google+**](https://plus.google.com/communities/117606893613804534090/)
 
 ## Donations
-<a href="https://paypal.me/MathiasN" title="Donate with PayPal" target="_blank"><img alt="Donate with PayPal" src=" https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png" /></a>
+[**Donate with PayPal**](https://paypal.me/MathiasN)
 
 ## Logo
 <img src="http://www.bilder-upload.eu/thumb/5ca473-1474374895.png" />
