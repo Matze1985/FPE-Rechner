@@ -5,6 +5,8 @@ Please check with a doctor previously!
 It is not a officially approved medical application.
 
 <b>Extra Tools:</b>
+* Food database
+* Factor database by time
 * Converter for mg/dl and mmol/l
 
 <a href="https://play.google.com/store/apps/details?id=de.crazyinfo.fpe_rechner"><img alt="Get it on Google Play" src="http://steverichey.github.io/google-play-badge-svg/img/en_get.svg" /></a>
@@ -16,4 +18,4 @@ It is not a officially approved medical application.
 [**Donate with PayPal**](https://paypal.me/MathiasN)
 
 ## Logo
-<img src="http://www.bilder-upload.eu/thumb/5ca473-1474374895.png" />
+<img src="https://lh3.googleusercontent.com/pWqwcqNVEr6Bq62yDOyInSyywYPSEBf96MBEYm2MWlfd5UpG77INPvapMyJP8gOWeU2w=w150" />

@@ -2,12 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.crazyinfo.fpe_rechner">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+
         <activity android:name="de.crazyinfo.fpe_rechner.MainActivity">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +37,26 @@
             <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="de.crazyinfo.fpe_rechner.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="de.crazyinfo.fpe_rechner.FoodShowActivity"
+            android:label="FoodShow"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.crazyinfo.fpe_rechner.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="de.crazyinfo.fpe_rechner.ManageFoodActivity"
+            android:label="ManageFood"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.crazyinfo.fpe_rechner.MainActivity" />
         </activity>
 
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for

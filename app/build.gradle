@@ -6,13 +6,13 @@ android {
         }
     }
     compileSdkVersion 25
-    buildToolsVersion "23.0.3"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "de.crazyinfo.fpe_rechner"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 10
-        versionName "1.5.2"
+        versionName "1.6.0"
         signingConfig signingConfigs.config
     }
     buildTypes {
@@ -27,6 +27,6 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:21.0.+'
+    compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
 }

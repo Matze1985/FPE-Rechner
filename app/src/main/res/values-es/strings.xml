@@ -9,6 +9,8 @@
     <string name="editTextKcal">calorias</string>
     <!-- String for the calculation of factor -->
     <string name="editTextFactor">factor</string>
+    <!-- String for editbox name -->
+    <string name="editTextName">nombre</string>
     <!-- String for the calculation button -->
     <string name="buttonCalc">calcular</string>
     <!-- String for the calculation result fpu -->
@@ -29,4 +31,56 @@
     <string name="textViewNoteConverter">Aqui tienes un calculador para convertir unidades de mg/dl a mmol/l y al revés.</string>
     <!-- String for info on toolbar -->
     <string name="toolbarInfo">Info</string>
+    <!-- String for text manage food -->
+    <string name="textViewManageFood">Aqui puedes añadir, editar y cambiar alimentos.</string>
+    <!-- String for food database - title -->
+    <string name="textViewFoodDatabaseTitle">Lista de Alimentos:</string>
+    <!-- String for food database - description -->
+    <string name="textViewFoodDatabaseDescription"><b>Pulsa breve en lista:</b>\nElige alimento\n\<b>\pulsa largo en lista:</b>\nEditar alimento</string>
+    <!-- String for food to calculate - title -->
+    <string name="textViewFoodTitle">Seleccionar alimentos:</string>
+    <!-- String for food add calculate food - description -->
+    <string name="textViewFoodDescription"><b>Pulsa breve en lista:</b>\nBorrar alimento</string>
+    <!-- String for food on toolbar -->
+    <string name="toolbarFood">Alimentos</string>
+    <!-- Toast and show msg - no data found -->
+    <string name="toastNoData">Ningun dato encontrado!</string>
+    <!-- String for show msg dialog clock -->
+    <string name="showMsgClock">hora/s</string>
+    <!-- String for show msg dialog factor title -->
+    <string name="showMsgFactorTitle">datos guardados hasta ahora:</string>
+    <!-- Toast for double entry  -->
+    <string name="toastDoubleEntry">Datos ya existen!</string>
+    <!-- Toast error msg for no selected eat  -->
+    <string name="toastNoEatSelected">Ningun alimento seleccionado para calcular!</string>
+    <!-- String for toast - export error var two -->
+    <string name="toastExportError">Exportacion fallada!</string>
+    <!-- String for toast - export successful var two -->
+    <string name="toastExportSuccessful">Datos guadados en carpeta downloads!</string>
+    <!-- String for toast - import successful -->
+    <string name="toastImportSuccessful">Exito de importacion!</string>
+    <!-- String for toast - import error -->
+    <string name="toastImportError">Importacion de carpeta downloads fallado!</string>
+    <!-- Button cancel -->
+    <string name="buttonCancel">Cancelar</string>
+    <!-- Button import -->
+    <string name="buttonImport">Importar</string>
+    <!-- Button export -->
+    <string name="buttonExport">Exportar</string>
+    <!-- String for button factor settings -->
+    <string name="buttonFactorSettings">⌚</string>
+    <!-- String for button food settings -->
+    <string name="buttonFoodSettings">🍔</string>
+    <!-- String for button add -->
+    <string name="buttonAccept">Acceptar</string>
+    <!-- String for button new -->
+    <string name="buttonNew">Nuevo</string>
+    <!-- String for button change -->
+    <string name="buttonChange">Cambiar</string>
+    <!-- String for button delete -->
+    <string name="buttonDelete">Borrar</string>
+    <!-- Toast - Permissions to save -->
+    <string name="toastPermissionsStorage">Se necesita permiso para guardar, por favor activalo en configuraciones!</string>
+    <!-- String text for time -->
+    <string name="textTime">tiempo</string>
 </resources>

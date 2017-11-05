@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
-5    <shortcut
+   <shortcut
         android:shortcutId="main"
         android:enabled="true"
         android:icon="@drawable/ic_main_24dp"
@@ -11,6 +11,18 @@
             android:action="main"
             android:targetPackage="de.crazyinfo.fpe_rechner"
             android:targetClass="de.crazyinfo.fpe_rechner.MainActivity" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="foodshow"
+        android:enabled="true"
+        android:icon="@drawable/ic_foodshow_24dp"
+        android:shortcutShortLabel="@string/toolbarFood"
+        android:shortcutLongLabel="@string/toolbarFood"
+        android:shortcutDisabledMessage="@string/toolbarFood">
+        <intent
+            android:action="foodshow"
+            android:targetPackage="de.crazyinfo.fpe_rechner"
+            android:targetClass="de.crazyinfo.fpe_rechner.FoodShowActivity" />
     </shortcut>
     <shortcut
         android:shortcutId="converter"

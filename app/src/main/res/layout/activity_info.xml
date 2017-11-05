@@ -18,7 +18,7 @@
     <TextView
         android:autoLink="web"
         android:textColorLink="#b5e61d"
-        android:text="Mathias Noack\nCopyright © 2017\ngnu.org/licenses/gpl-3.0"
+        android:text="Mathias Noack\ngnu.org/licenses/gpl-3.0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0.07"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.07"
         android:id="@+id/textViewInfoMail"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/textViewInfoCopyright"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="de.crazyinfo.fpe_rechner.ManageFoodActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_material_dark"
+        android:elevation="4dp"
+        android:theme="@style/toolbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <TextView
+        android:text="@string/textViewManageFood"
+        android:id="@+id/textViewManageFood"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.07"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignLeft="@+id/editTextCho"
+        android:layout_alignStart="@+id/editTextCho"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+        <EditText
+            android:hint="@string/editTextName"
+            android:id="@+id/editName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:backgroundTint="#b5e61d"
+            android:imeOptions="actionNext"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textViewManageFood"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp" />
+        <EditText
+            android:hint="@string/editTextCho"
+            android:id="@+id/editCho"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:backgroundTint="#b5e61d"
+            android:imeOptions="actionNext"
+            android:layout_below="@+id/editName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" />
+        <EditText
+            android:hint="@string/editTextKcal"
+            android:id="@+id/editKcal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:backgroundTint="#b5e61d"
+            android:imeOptions="actionNext"
+            android:layout_below="@+id/editCho"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" />
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editKcal"
+            android:layout_alignLeft="@+id/editKcal"
+            android:layout_alignStart="@+id/editKcal"
+            android:layout_alignRight="@+id/editKcal"
+            android:layout_alignEnd="@+id/editKcal">
+            <Button
+                android:text="@string/buttonNew"
+                android:id="@+id/buttonNew"
+                android:elevation="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20" />
+            <Button
+                android:text="@string/buttonChange"
+                android:id="@+id/buttonChange"
+                android:elevation="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20" />
+            <Button
+                android:text="@string/buttonDelete"
+                android:id="@+id/buttonDelete"
+                android:elevation="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20" />
+        </LinearLayout>
+</RelativeLayout>

@@ -96,11 +96,11 @@ public class ConverterActivity extends ActionBarActivity implements View.OnClick
         }
 
         /* Berechnungen */
-        Locale.setDefault(new Locale("en", "US"));                                                      // Punkt statt Komma verwenden
+        Locale.setDefault(new Locale("en", "US"));                                     // Punkt statt Komma verwenden
         mgdlSubResult = Math.abs(converter * 0.0555);                                                   // Teilergebnis mg/dl berechnen
         String mgdlResult = String.format("%.1f", mgdlSubResult);                                       // Ergebnis ohne Komma gerundet
         mmollSubResult = Math.abs(converter * 18.0182);                                                 // Teilergebnis mmol/l berechnen
-        String mmollResult = String.format(Locale.ROOT, "%.0f", mmollSubResult);                        // Ergebnis mit Komma gerundet
+        String mmollResult = String.format(Locale.ROOT, "%.0f", mmollSubResult);                 // Ergebnis mit Komma gerundet
 
         switch (v.getId()) {
             case R.id.buttonMmoll:

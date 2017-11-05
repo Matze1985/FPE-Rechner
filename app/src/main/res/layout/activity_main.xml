@@ -73,20 +73,35 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp" />
 
-    <Button
-        android:text="@string/buttonCalc"
-        android:id="@+id/buttonCalc"
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:allowUndo="true"
-        style="@android:style/Widget.Material.Button"
         android:layout_below="@+id/editTextFactor"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:elevation="10dp" />
+        android:layout_alignLeft="@+id/editTextFactor"
+        android:layout_alignStart="@+id/editTextFactor"
+        android:layout_alignRight="@+id/editTextFactor"
+        android:layout_alignEnd="@+id/editTextFactor">
+        <Button
+            android:text="@string/buttonFactorSettings"
+            android:id="@+id/buttonFactorSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20" />
+        <Button
+            android:text="@string/buttonCalc"
+            android:id="@+id/buttonCalc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="60" />
+        <Button
+            android:text="@string/buttonFoodSettings"
+            android:id="@+id/buttonFoodSettings"
+            android:elevation="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20" />
+    </LinearLayout>
 
     <TextView
         android:textIsSelectable="true"
@@ -94,12 +109,11 @@
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:id="@+id/textViewResult"
-        android:layout_below="@+id/buttonCalc"
+        android:layout_below="@+id/buttons"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
         android:padding="20dp" />
-
 </RelativeLayout>

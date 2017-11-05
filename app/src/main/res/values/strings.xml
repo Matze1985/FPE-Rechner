@@ -3,10 +3,22 @@
     <string name="app_name">FPU-Calculator</string>
     <!-- String for important text note -->
     <string name="textViewNote">This app is designed, to help diabetics, to calculate the fat protein units.\n\nFat protein units will additionally to the bread units calculated.\n\nPlease check with a doctor previously!</string>
+    <!-- String for text manage food -->
+    <string name="textViewManageFood">Here, food can be new created, changed and deleted.</string>
+    <!-- String for food database - title -->
+    <string name="textViewFoodDatabaseTitle">Food database:</string>
+    <!-- String for food database - description -->
+    <string name="textViewFoodDatabaseDescription"><b>Short press in list:</b>\nSelect food\n\n<b>Long press in list:</b>\nManage food</string>
+    <!-- String for food to calculate - title -->
+    <string name="textViewFoodTitle">Food choice:</string>
+    <!-- String for food add calculate food - description -->
+    <string name="textViewFoodDescription"><b>Short press in list:</b>\nRemove food</string>
     <!-- String for the calculation of carbohydrates -->
     <string name="editTextCho">carbohydrates</string>
     <!-- String for the calculation of kcal -->
     <string name="editTextKcal">kcal</string>
+    <!-- String for editbox name -->
+    <string name="editTextName">name</string>
     <!-- String for the calculation of factor -->
     <string name="editTextFactor">factor</string>
     <!-- String for the calculation button -->
@@ -29,4 +41,48 @@
     <string name="textViewNoteConverter">Here find a converter for the units of measure mg/dl and mmol/l.</string>
     <!-- String for info on toolbar -->
     <string name="toolbarInfo">Info</string>
+    <!-- String for food on toolbar -->
+    <string name="toolbarFood">Food</string>
+    <!-- Toast and show msg - no data found -->
+    <string name="toastNoData">No Data found!</string>
+    <!-- String for show msg dialog clock -->
+    <string name="showMsgClock">o\'clock</string>
+    <!-- String for show msg dialog factor title -->
+    <string name="showMsgFactorTitle">Recorded entries so far:</string>
+    <!-- Toast for double entry  -->
+    <string name="toastDoubleEntry">Entry already exists!</string>
+    <!-- Toast error msg for no selected eat  -->
+    <string name="toastNoEatSelected">No food for calculation selected!</string>
+    <!-- String for toast - export error var two -->
+    <string name="toastExportError">Export failed!</string>
+    <!-- String for toast - export successful var two -->
+    <string name="toastExportSuccessful">Export successfully saved in downloads folder!</string>
+    <!-- String for toast - import successful -->
+    <string name="toastImportSuccessful">Import successful!</string>
+    <!-- String for toast - import error -->
+    <string name="toastImportError">Import from downloads folder failed!</string>
+    <!-- Button cancel -->
+    <string name="buttonCancel">Cancel</string>
+    <!-- Button import -->
+    <string name="buttonImport">Import</string>
+    <!-- Button export -->
+    <string name="buttonExport">Export</string>
+    <!-- String for button factor settings -->
+    <string name="buttonFactorSettings">⌚</string>
+    <!-- String for button food settings -->
+    <string name="buttonFoodSettings">🍔</string>
+    <!-- String for button add -->
+    <string name="buttonAccept">Accept</string>
+    <!-- String for button new -->
+    <string name="buttonNew">New</string>
+    <!-- String for button change -->
+    <string name="buttonChange">Change</string>
+    <!-- String for button delete -->
+    <string name="buttonDelete">Delete</string>
+    <!-- Toast - Permissions to save -->
+    <string name="toastPermissionsStorage">Permissions required to save, please allow in app settings!</string>
+    <!-- String for text manage food settings - import / export -->
+    <string name="textViewManageFoodSettings">Database settings:</string>
+    <!-- String text for time -->
+    <string name="textTime">time</string>
 </resources>
