@@ -83,4 +83,6 @@
     <string name="toastPermissionsStorage">Se necesita permiso para guardar, por favor activalo en configuraciones!</string>
     <!-- String text for time -->
     <string name="textTime">tiempo</string>
+    <!-- String for text manage food settings - import / export -->
+    <string name="textViewManageFoodSettings">Configuración de la base:</string>
 </resources>

@@ -431,8 +431,6 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 
                 /* Prüfe Import: addHour + addFactor */
                 if (importDone.exists() && line.matches(".*^(?:[^;]*+;){1}[^;]*+$.*") && addHour.matches(".*^([0-9]|1[0-9]|2[0-3])$.*") && addFactor.matches(".*^[0-9]+([.][0-9]+)?$.*")) {
-                    finish();
-                    startActivity(getIntent());
                 } else {
                     Toast.makeText(MainActivity.this, getString(R.string.toastImportError), Toast.LENGTH_SHORT).show();
                     finish();
@@ -441,6 +439,8 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
                 }
                 myDB.addDataFactor(Integer.parseInt(addHour), addFactor);
             }
+            finish();
+            startActivity(getIntent());
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(MainActivity.this, getString(R.string.toastImportError), Toast.LENGTH_SHORT).show();

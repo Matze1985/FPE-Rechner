@@ -11,8 +11,8 @@ android {
         applicationId "de.crazyinfo.fpe_rechner"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 10
-        versionName "1.6.0"
+        versionCode 12
+        versionName "1.6.1"
         signingConfig signingConfigs.config
     }
     buildTypes {

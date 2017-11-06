@@ -319,8 +319,6 @@ public class FoodShowActivity extends ActionBarActivity {
 
                 /* Prüfe Import: addName + addCho + addKcal */
                 if (importDone.exists() && line.matches(".*^(?:[^;]*+;){2}[^;]*+$.*") && addName.matches(".*[A-Za-z].*")  && addCho.matches(".*^[0-9]+([.][0-9]+)?$.*") && addKcal.matches(".*^[0-9]+$.*")) {
-                    finish();
-                    startActivity(getIntent());
                 } else {
                     Toast.makeText(FoodShowActivity.this, getString(R.string.toastImportError), Toast.LENGTH_SHORT).show();
                     finish();
@@ -332,6 +330,8 @@ public class FoodShowActivity extends ActionBarActivity {
                 }
                 myDB.addDataFood(addName, addCho, addKcal);
             }
+            finish();
+            startActivity(getIntent());
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(FoodShowActivity.this, getString(R.string.toastImportError), Toast.LENGTH_SHORT).show();
