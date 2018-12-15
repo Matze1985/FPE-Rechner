@@ -338,7 +338,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
                         if (!exportDone) {
                             Toast.makeText(MainActivity.this, getString(R.string.toastExportError), Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(MainActivity.this, getString(R.string.toastExportSuccessful), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, getString(R.string.toastExportSuccessful) + " " + Environment.DIRECTORY_DOWNLOADS, Toast.LENGTH_SHORT).show();
                             finish();startActivity(getIntent());
                         }
                     }

@@ -56,11 +56,11 @@
     <!-- String for toast - export error var two -->
     <string name="toastExportError">L'export manqua!</string>
     <!-- String for toast - export successful var two -->
-    <string name="toastExportSuccessful">Export enregistré avec succeès en dossier downloads!</string>
+    <string name="toastExportSuccessful">Exportation réussie!\nChemin:</string>
     <!-- String for toast - import successful -->
     <string name="toastImportSuccessful">Importé avec succés!</string>
     <!-- String for toast - import error -->
-    <string name="toastImportError">L'import du dossier downloads manqua!</string>
+    <string name="toastImportError">Échec de l'importation!</string>
     <!-- Button cancel -->
     <string name="buttonCancel">Annuler</string>
     <!-- Button import -->

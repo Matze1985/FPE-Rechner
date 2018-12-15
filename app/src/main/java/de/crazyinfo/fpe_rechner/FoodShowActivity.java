@@ -180,7 +180,7 @@ public class FoodShowActivity extends ActionBarActivity {
                 if (!exportDone) {
                     Toast.makeText(FoodShowActivity.this, getString(R.string.toastExportError), Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(FoodShowActivity.this, getString(R.string.toastExportSuccessful), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FoodShowActivity.this, getString(R.string.toastExportSuccessful) + " " + Environment.DIRECTORY_DOWNLOADS, Toast.LENGTH_SHORT).show();
                     finish();startActivity(getIntent());
                 }
             }

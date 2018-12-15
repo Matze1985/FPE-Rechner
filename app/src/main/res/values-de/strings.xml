@@ -34,11 +34,11 @@
     <!-- String for food database - title -->
     <string name="textViewFoodDatabaseTitle">Lebensmitteldatenbank:</string>
     <!-- String for food database - description -->
-    <string name="textViewFoodDatabaseDescription"><b>Kurz drücken in Liste:</b>\nLebensmittel auswählen\n\n<b>Lang drücken in Liste:</b>\nLebensmittel verwalten</string>
+    <string name="textViewFoodDatabaseDescription"><b>Kurz in Liste drücken:</b>\nLebensmittel auswählen\n\n<b>Lang in Liste drücken:</b>\nLebensmittel verwalten</string>
     <!-- String for food to calculate - title -->
     <string name="textViewFoodTitle">Lebensmittelauswahl:</string>
     <!-- String for food add calculate food - description -->
-    <string name="textViewFoodDescription"><b>Kurz drücken in Liste:</b>\nLebensmittel entfernen</string>
+    <string name="textViewFoodDescription"><b>Kurz in Liste drücken:</b>\nLebensmittel entfernen</string>
     <!-- String for info on toolbar -->
     <string name="toolbarInfo">Info</string>
     <!-- String for food on toolbar -->
@@ -56,11 +56,11 @@
     <!-- String for toast - export error -->
     <string name="toastExportError">Export fehlgeschlagen!</string>
     <!-- String for toast - export successful -->
-    <string name="toastExportSuccessful">Export erfolgreich unter Downloads gespeichert!</string>
+    <string name="toastExportSuccessful">Export erfolgreich!\nOrdner:</string>
     <!-- String for toast - import successful -->
     <string name="toastImportSuccessful">Import erfolgreich!</string>
     <!-- String for toast - import error -->
-    <string name="toastImportError">Import aus Downloads fehlgeschlagen!</string>
+    <string name="toastImportError">Import fehlgeschlagen!</string>
     <!-- Button cancel -->
     <string name="buttonCancel">Abbrechen</string>
     <!-- Button import -->
